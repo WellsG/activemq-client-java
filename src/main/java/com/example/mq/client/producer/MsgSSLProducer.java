@@ -37,7 +37,7 @@ public class MsgSSLProducer {
             producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 
             // Create a messages
-            String text = "Hello world!";
+            String text = "Hello world ssl!";
             TextMessage message = session.createTextMessage(text);
 
             // Tell the producer to send the message
