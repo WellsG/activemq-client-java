@@ -1,4 +1,4 @@
 # activemq-client-java
 
-tcp
-ssl
+ref: 
+* http://activemq.apache.org/how-do-i-use-ssl.html
