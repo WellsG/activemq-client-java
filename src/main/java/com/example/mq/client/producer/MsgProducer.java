@@ -36,7 +36,12 @@ public class MsgProducer {
 
             // Tell the producer to send the message
             System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());
-            producer.send(message);
+            try {
+            	producer.send(message);
+            } catch (Exception e) {
+            	//TODO Store message send failed
+            	throw e;
+            }
 
             // Clean up
             session.close();
