@@ -42,6 +42,7 @@ public class MsgSSLProducer {
 
             // Tell the producer to send the message
             System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());
+            producer.setTimeToLive(30000);
             producer.send(message);
 
             // Clean up
